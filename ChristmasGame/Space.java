@@ -106,6 +106,7 @@ public class Space {
 	
 	public void result1 () {
 		
+		
 	}
 	public void result2 () {
 		

@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Visual extends JFrame implements ActionListener {
+public class Visual extends JFrame  {
 	protected Player player;
 	protected Space space;
 	protected JButton exButton1, exButton2, exButton3, exButton4, exInvButton;
@@ -48,22 +48,22 @@ public class Visual extends JFrame implements ActionListener {
 		exButton1 = new JButton(space.getOption1());
 		exButton1.setBackground(Color.BLACK);
 		exButton1.setForeground(Color.WHITE);
-		exButton1.addActionListener(this);
+//		exButton1.addActionListener(this);
 		exButtonPanel.add(exButton1);
 		exButton2 = new JButton(space.getOption2());
 		exButton2.setBackground(Color.BLACK);
 		exButton2.setForeground(Color.WHITE);
-		exButton2.addActionListener(this);
+//		exButton2.addActionListener(this);
 		exButtonPanel.add(exButton2);
 		exButton3 = new JButton(space.getOption3());
 		exButton3.setBackground(Color.BLACK);
 		exButton3.setForeground(Color.WHITE);
-		exButton3.addActionListener(this);
+//		exButton3.addActionListener(this);
 		exButtonPanel.add(exButton3);
 		exButton4 = new JButton(space.getOption4());
 		exButton4.setBackground(Color.BLACK);
 		exButton4.setForeground(Color.WHITE);
-		exButton4.addActionListener(this);
+//		exButton4.addActionListener(this);
 		exButtonPanel.add(exButton4);
 					
 /*the text in the JLabel is formatted using HTML (<html> and <div> tags) to 
@@ -124,27 +124,51 @@ intermediate panel    */
 		this.space = space; 
 	}
 
-/*this method will perform actions when buttons are pressed. Each button will 
+public JButton getExButton1() {
+		return exButton1;
+	}
+	public void setExButton1(JButton exButton1) {
+		this.exButton1 = exButton1;
+	}
+	public JButton getExButton2() {
+		return exButton2;
+	}
+	public void setExButton2(JButton exButton2) {
+		this.exButton2 = exButton2;
+	}
+	public JButton getExButton3() {
+		return exButton3;
+	}
+	public void setExButton3(JButton exButton3) {
+		this.exButton3 = exButton3;
+	}
+	public JButton getExButton4() {
+		return exButton4;
+	}
+	public void setExButton4(JButton exButton4) {
+		this.exButton4 = exButton4;
+	}
+	/*this method will perform actions when buttons are pressed. Each button will 
  * trigger a result method in the space object, which in turn will alter
  * buttons, text etc. So the update method is called after the result is.
  */
-	public void actionPerformed (ActionEvent e) {
-		if (e.getSource() == exButton1) {
-						
-		} 
-		else if (e.getSource() == exButton2) {
-			
-		}
-		else if (e.getSource ()== exButton3) {
-			
-		}
-		else if (e.getSource () == exButton4) {
-			if (this.space.getButtonFour()< 1) {
-				space.result4();
-				this.update();
-			}		
-		}	
-	}
+//	public void actionPerformed (ActionEvent e) {
+//		if (e.getSource() == exButton1) {
+//						
+//		} 
+//		else if (e.getSource() == exButton2) {
+//			
+//		}
+//		else if (e.getSource ()== exButton3) {
+//			
+//		}
+//		else if (e.getSource () == exButton4) {
+//			if (this.space.getButtonFour()< 1) {
+//				space.result4();
+//				this.update();
+//			} 		
+//		}	
+//	}
 
 /*This updates the text and buttons from the space and can be called after a
 result has been triggered */
